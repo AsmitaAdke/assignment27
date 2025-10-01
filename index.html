@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>word translator</title>
+  <meta charset="UTF-8">
+  <title>Simple Multi-Language Translator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #f0f4f8, #d6eaf8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .translator-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      width: 340px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+    input, select {
+      width: 80%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .btn-group {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+    .translate-btn {
+      background: #3498db;
+      color: white;
+    }
+    .translate-btn:hover {
+      background: #2c80b9;
+    }
+    .clear-btn {
+      background: #e74c3c;
+      color: white;
+    }
+    .clear-btn:hover {
+      background: #c0392b;
+    }
+    .output {
+      margin-top: 18px;
+      font-size: 16px;
+      color: #333;
+      padding: 10px;
+      border: 1px dashed #aaa;
+      border-radius: 6px;
+      min-height: 30px;
+      background: #f9f9f9;
+    }
+  </style>
 </head>
 <body>
-    <div class="translator-box">
+  <div class="translator-box">
     <h2>🌍 Word Translator</h2>
     <input type="text" id="wordInput" placeholder="Enter English word...">
     <br>
@@ -70,7 +138,6 @@
       }
     }
 
-    
     function clearFields() {
       document.getElementById("wordInput").value = "";
       document.getElementById("result").innerText = "";
