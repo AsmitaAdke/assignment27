@@ -57,5 +57,17 @@
       const input = document.getElementById("wordInput").value.trim().toLowerCase();
       const language = document.getElementById("languageSelect").value;
       const resultDiv = document.getElementById("result");
+
+      if (input === "") {
+        resultDiv.innerText = "⚠️ Please enter a word.";
+        return;
+      }
+
+      if (dictionary[language][input]) {
+        resultDiv.innerText = `"${input}" → "${dictionary[language][input]}"`;
+      } else {
+        resultDiv.innerText = "❌ Word not found in dictionary.";
+      }
+    }
 </body>
 </html>
